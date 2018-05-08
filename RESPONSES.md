@@ -8,12 +8,12 @@ The paper describes BEETLE and the results of evaluating it on five open-source 
 
 ### Detailed evaluation
 
-##### 1.1 First, what are the prerequisites for selecting a bellwether environment, and how does selection occur?
+##### 1.1) First, what are the prerequisites for selecting a bellwether environment, and how does selection occur?
 
-There are no prerequisites for selecting the bellwether environment. While conducting our experiments, we were not biased while choosing the environments instead, we used our domain knowledge to choose environments which models the real-world scenarios.
+_There are no prerequisites for selecting the bellwether environment. While conducting our experiments, we were not biased while choosing the environments instead, we used our domain knowledge to choose environments which models the real-world scenarios._
 
 
-##### 1.2 Section 5 suggests that some number of previously optimized environments running optimal configurations of a software system, A, must exist, and that these are used to find a bellwether environment suitable for training a transfer learner that can find a near-optimal configuration of A for a new environment. How would I know if I had an adequate set of such environments, apart from checking to see if there is a bellwether environment which enables prediction of near-optimal configurations of the existing environments?
+##### 1.2) Section 5 suggests that some number of previously optimized environments running optimal configurations of a software system, A, must exist, and that these are used to find a bellwether environment suitable for training a transfer learner that can find a near-optimal configuration of A for a new environment. How would I know if I had an adequate set of such environments, apart from checking to see if there is a bellwether environment which enables prediction of near-optimal configurations of the existing environments?
 
 There are two basic scenarios where BEETLE can be used:
 A user (in the real-world) maybe N different environments (workload + hardware + software version) to optimize and a limited budget (in terms of total number of measurements/execution). In such cases, BEETLE can be used to find a bellwether environment. Once the bellwether environment is identified, more samples is collected/measured to build a predictor which can be used to find the near-optimal configurations for the rest of the environments.
