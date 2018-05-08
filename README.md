@@ -2,7 +2,7 @@
 ![](/beetle.png)
 ## Submission 
 
-Submitted to [Information and Software Technology](https://www.journals.elsevier.com/information-and-software-technology/). ARXIV Link: https://arxiv.org/abs/1609.03614v3
+Submitted to [Foundations of Software Engineering (FSE) 2018](https://conf.researchr.org/home/fse-2018). ARXIV Link: https://arxiv.org/abs/1803.03900
 
 ## Cite As
 
@@ -29,15 +29,15 @@ Eprint = {arXiv:1803.03900},
 
 ## Data
 
-+ [Jurecko defect data](http://openscience.us/repo/defect/ck)
++ [Configuration Data](/src/Data)
 
 ## Latex Source
 
-+ [Information and Software Technology Submission](https://github.com/ai-se/XTREE/tree/master/doc/IST)
++ [FSE 2018 Submission](https://arxiv.org/e-print/1803.03900)
 
 ## Source Code
 
-+ [XTREES](https://github.com/ai-se/XTREE/tree/master/src)
++ [XTREES](/src/)
 
 ## License
 
