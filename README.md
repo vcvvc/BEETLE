@@ -1,20 +1,3 @@
-# Beetle: **Be**llw**e**ther **T**ransfer **Le**arner 
-## Transfer Learning for Configuration Optimization
-```
-
-                ,_    /) (\    _,
-                 >>  <<,_,>>  <<
-                //   _0.-.0_   \\
-                \'._/       \_.'/
-                 '-.\.--.--./.-'
-                 __/ : :Y: : \ _
-         ';,  .-(_| : : | : : |_)-.  ,:'
-           \\/.'  |: : :|: : :|  `.\//
-            (/    |: : :|: : :|    \)
-                  |: : :|: : :;
-                 /\ : : | : : /\
-                (_/'.: :.: :.'\_)
-                 \\  `""`""`  //
-             jgs  \\         //
-                   ':.     .:'
-```
+# BEETLE: **BE**llw**E**ther **T**ransfer **LE**arner 
+### Transfer Learning for Configuration Optimization
+![](/beetle.png)
