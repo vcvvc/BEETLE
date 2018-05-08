@@ -37,7 +37,7 @@ Eprint = {arXiv:1803.03900},
 
 ## Source Code
 
-+ [XTREES](/src/)
++ [BEETLE](/src/)
 
 ## License
 
