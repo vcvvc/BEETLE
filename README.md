@@ -1,3 +1,3 @@
-# BEETLE: **BE**llw**E**ther **T**ransfer **LE**arner 
-### Transfer Learning for Configuration Optimization
+# BEETLE: **BE**LLW**E**THER **T**RANSFER **LE**ARNER 
 ![](/beetle.png)
+## Transfer Learning for Configuration Optimization
