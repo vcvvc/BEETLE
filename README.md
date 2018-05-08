@@ -7,7 +7,7 @@ Submitted to [Foundations of Software Engineering (FSE) 2018](https://conf.resea
 ## Cite As
 
 ```
-@misc{,
+@misc{nair19beetle,
 Author = {Vivek Nair, Rahul Krishna, Tim Menzies, and Pooyan Jamshidi},
 Title = {Transfer Learning with Bellwethers to Find Good Configurations},
 Year = {2018},
