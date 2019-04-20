@@ -22,7 +22,8 @@ def run(source, targets, reps, measure):
 
         ctrain_dep = ctrain_dep[0]
         train_indep = train_content[ctrain_indep]
-        train_dep = train_content[ctrain_dep]
+        temp_train = train_content[ctrain_dep]
+        train_dep = (temp_train - temp_train.min())/(temp_train.max() - temp_train.min())
 
         source_name = source.replace('../Data/', '').replace('.csv', '')
         target_name = target.replace('../Data/', '').replace('.csv', '')
@@ -58,18 +59,23 @@ def run(source, targets, reps, measure):
                 # Take care of duplicate performance values
                 l_ranks = np.searchsorted(np.sort(test_dep), test_dep).tolist()
                 ranks = [i[0] for i in sorted(enumerate(test_predict_dep), key=lambda x:x[1])]
-                data_family[source][target][measure].append(l_ranks[ranks[0]])
+                data_family[source][target][measure].append(abs(test_dep.iloc[0] - test_dep.iloc[ranks[0]])*100)
+                # print test_dep.iloc[0], test_dep.iloc[ranks[0]], abs(test_dep.iloc[0] - test_dep.iloc[ranks[0]])
+
             # for mmre based measures
             elif measure == 'mmre':
                 test_indep = test_content[ctest_indep]
-                test_dep = test_content[ctest_dep]
+                temp_test_dep = test_content[ctest_dep]
+                test_dep = (temp_test_dep - temp_test_dep.min())/(temp_test_dep.max() - temp_test_dep.min())
+
                 test_predict_dep = tree.predict(test_indep)
                 data_family[source][target][measure].append(np.mean(
                     [abs(actual - predicted) / actual for actual, predicted in zip(test_dep, test_predict_dep) if actual != 0]) * 100)
             # for abs based measures
             elif measure == 'abs_res':
                 test_indep = test_content[ctest_indep]
-                test_dep = test_content[ctest_dep]
+                temp_test_dep = test_content[ctest_dep]
+                test_dep = (temp_test_dep - temp_test_dep.min()) / (temp_test_dep.max() - temp_test_dep.min())
                 test_predict_dep = tree.predict(test_indep)
                 data_family[source][target][measure].append(
                     sum([abs(actual - predicted) for actual, predicted in zip(test_dep, test_predict_dep)]))
@@ -80,10 +86,10 @@ def run(source, targets, reps, measure):
 
 if __name__ == "__main__":
     seed(10)
-    reps = 30
-    familys = [ 'storm-obj1', 'storm-obj2', 'spear', 'sac',  'x264', 'sqlite',
+    reps = 3
+    familys = [ 'sac', #'sqlite', #'storm-obj1', 'storm-obj2', 'spear', 'sac',  'x264',
                 ]
-    measures = ['rank', 'mmre', 'abs_res']
+    measures = [ 'rank',]#'mmre', 'abs_res',
     data_folder = "../Data/"
     import multiprocessing as mp
     # Main control loop
@@ -95,8 +101,8 @@ if __name__ == "__main__":
                 source = file
                 targets = [f for f in files if file!=f]
                 assert(len(targets) + 1 == len(files)), "Something is wrong"
-                # run(source, targets, reps, measure)
-                pool.apply_async(run, (source, targets, reps, measure))
+                run(source, targets, reps, measure)
+                # pool.apply_async(run, (source, targets, reps, measure))
             print
     pool.close()
     pool.join()

@@ -3,8 +3,8 @@ import pickle
 import numpy as np
 import csv
 
-pickle_folder = "./Pickle_Folder/"
-myfile = open('./Results/overall_normalized.csv', 'w')
+pickle_folder = "./PickleFolder/"
+myfile = open('./Results_new/overall_normalized.csv', 'w')
 writer = csv.writer(myfile)
 
 ret = {}
@@ -29,7 +29,7 @@ rows = {
     'storm-obj2': 2049,
 }
 
-familys = ['x264', 'storm-obj2', 'storm-obj1', 'sac', 'spear']
+familys = ['x264', 'storm-obj2', 'storm-obj1', 'sac', 'spear', 'sqlite']
 heading = ['step_size', 'percentage', 'loss'] + familys + ['N-'+family for family in familys]
 writer.writerow(heading)
 parameters = ret.keys()
