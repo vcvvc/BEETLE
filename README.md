@@ -7,25 +7,30 @@ Submitted to [Foundations of Software Engineering (FSE) 2018](https://conf.resea
 ## Cite As
 
 ```
-@misc{nair18beetle,
-Author = {Vivek Nair, Rahul Krishna, Tim Menzies, and Pooyan Jamshidi},
+@misc{krishna19beetle,
+Author = {Rahul Krishna, Vivek Nair, Pooyan Jamshidi, and Tim Menzies},
 Title = {Transfer Learning with Bellwethers to Find Good Configurations},
 Year = {2018},
-journal= {Foundations of Software Engineering 2018, submitted.},
-Eprint = {arXiv:1803.03900},
+journal= {IEEE Transactions in Software Engineering 2019, submitted.},
+Eprint = {arXiv:1905.XXXXX},
 }
 ```
 
 ## Authors
 
-+ Vivek Nair, Rahul Krishna, Tim Menzies
++ Rahul Krishna
   + North Carolina State University, USA
-  + vivekaxl@gmail.com
   + i.m.ralk@gmail.com
   + tim.menzies@gmail.com
++ Vivek Nair
+  + Facebook, Seattle WA, USA
+  + vivekaxl@gmail.com
 + Pooyan Jamshidi
-  + Carnegie Mellon University, USA 
+  + University of South Carolina, USA 
   + pooyan.jamshidi@gmail.com 
++ Tim Menzies
+  + North Carolina State University, USA
+  + tim.menzies@gmail.com
 
 ## Data
 
@@ -33,7 +38,7 @@ Eprint = {arXiv:1803.03900},
 
 ## Latex Source
 
-+ [FSE 2018 Submission](https://arxiv.org/e-print/1803.03900)
++ [TSE 2019 Submission](https://arxiv.org/XXXX/1905.XXXXX)
 
 ## Source Code
 
